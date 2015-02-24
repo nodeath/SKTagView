@@ -51,13 +51,14 @@ static NSString *const kTagsTableCellReuseIdentifier = @"TagsTableCell";
     [cell.tagView removeAllTags];
     
     //Add Tags
-    [@[@"Python", @"Javascript", @"HTML", @"Go", @"Objective-C",@"C", @"PHP"] enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop)
+    [@[@"Python", @"Javascript", @"HTML", @"Go", @"Objective-C",@"C", @"PHP", @"+1235"] enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop)
      {
          SKTag *tag = [SKTag tagWithText:obj];
          tag.textColor = [UIColor whiteColor];
          tag.fontSize = 15;
          tag.padding = UIEdgeInsetsMake(13.5, 12.5, 13.5, 12.5);
-         tag.bgColor = [UIColor colorWithHexString:self.colorPool[idx % self.colorPool.count]];
+         //tag.bgColor = [UIColor colorWithHexString:self.colorPool[idx % self.colorPool.count]];
+         tag.bgColor = [UIColor grayColor];
          tag.cornerRadius = 5;
          
          [cell.tagView addTag:tag];

@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "ViewController.h"
+#import "TagsTableViewController.h"
 
 @interface AppDelegate ()
 
@@ -47,7 +48,7 @@
 {
   if(!_mainController)
   {
-    _mainController = [[ViewController alloc] init];
+    _mainController = [[TagsTableViewController alloc] init];
 
   }
   return _mainController;
